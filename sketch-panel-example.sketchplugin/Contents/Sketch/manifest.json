@@ -1,0 +1,40 @@
+{
+  "name" : "Panel Example",
+  "author" : "Mel Ludowise",
+  "homepage": "",
+  "bundleVersion": 1,
+  "identifier" : "com.mludowise.sketchpanelexample",
+  "version" : 0.1,
+  "compatibleVersion": 3,
+
+  "commands" : [
+    {
+      "script" : "main.js",
+      "handler" : "showPanel",
+      "name" : "Show Panel",
+      "identifier" : "show panel"
+    },
+    {
+      "script" : "main.js",
+      "handler" : "hidePanel",
+      "name" : "Hide Panel",
+      "identifier" : "hide panel"
+    },
+    {
+      "script" : "main.js",
+      "handlers" : {
+        "actions" : {
+           "SelectionChanged.finish" : "selectionChanged",
+           "OpenDocument" : "openDocument",
+        }
+      }
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "show panel",
+      "hide panel",
+      "print info",
+    ]
+  }
+}
